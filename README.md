@@ -15,7 +15,7 @@ Cada ejercicio fue desarrollado aplicando buenas prácticas de código, estructu
 - [📘 Teoría en Tutoriales Programación YA](https://www.tutorialesprogramacionya.com/javascriptya/jquery/index.php?inicio=0)
 - [📗 W3Schools jQuery Reference](https://www.w3schools.com/jquery/default.asp)
 
----
+````
 
 ## 🗂️ Estructura del proyecto
 
@@ -28,7 +28,7 @@ jquery-guia/
 └── setup_git.sh      # Script para inicializar y subir el repo
 
 
----
+````
 
 ## 💡 Descripción de los ejercicios
 
@@ -69,11 +69,11 @@ Abrí el archivo `index.html` directamente desde tu navegador
 ### 2️⃣ Servir con Python (para el Ejercicio 25)
 El ejercicio 25 usa `$.load()`, que requiere servidor local por política CORS:
 
-```bash
+```
 cd jquery-guia
 python -m http.server 8000
 # Luego abrí http://localhost:8000 en tu navegador
-
+```
 ## ⚙️ Ejecución local
 
 ### 1️⃣ Abrir el índice general
@@ -83,10 +83,12 @@ Abrí el archivo `index.html` directamente desde tu navegador
 ### 2️⃣ Servir con Python (para el Ejercicio 25)
 El ejercicio 25 usa `$.load()`, que requiere servidor local por política CORS:
 
-```bash
+```
 cd jquery-guia
 python -m http.server 8000
 # Luego abrí http://localhost:8000 en tu navegador
+```
+
 🎨 Diseño y estilo
 Tema oscuro minimalista
 
