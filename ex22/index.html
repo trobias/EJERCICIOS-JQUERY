@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>22 — fadeTo()</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>22 — fadeTo()</h2>
+    <div id="box" class="box">Caja</div>
+    <p>
+      <button class="btn" data-o="1">Opacidad 1.0</button>
+      <button class="btn" data-o="0.5">Opacidad 0.5</button>
+      <button class="btn" data-o="0.2">Opacidad 0.2</button>
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("button[data-o]").on("click", function(){
+        $("#box").fadeTo(400, parseFloat($(this).data("o")));
+      });
+    });
+  </script>
+</body>
+</html>

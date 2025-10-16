@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>08 — attr / removeAttr</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>.btns{display:flex;gap:8px;flex-wrap:wrap}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>08 — attr(), removeAttr()</h2>
+    <a id="link" href="" target="_blank">(sin destino)</a>
+    <small> href actual: <span id="estado">(vacío)</span></small>
+    <div class="btns">
+      <button class="btn" data-url="https://www.google.com" data-text="Ir a Google">Google</button>
+      <button class="btn" data-url="https://es.wikipedia.org" data-text="Ir a Wikipedia">Wikipedia</button>
+      <button class="btn" data-url="https://github.com" data-text="Ir a GitHub">GitHub</button>
+      <button id="quitar" class="btn">Quitar href</button>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      function refrescar(){ $("#estado").text($("#link").attr("href") || "(vacío)"); }
+      $(".btns .btn[data-url]").on("click", function(){
+        $("#link").attr({ href: $(this).data("url") }).text($(this).data("text"));
+        refrescar();
+      });
+      $("#quitar").on("click", function(){ $("#link").removeAttr("href").text("(sin destino)"); refrescar(); });
+      refrescar();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>12 — mouseover / mouseout</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>#area{height:160px}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>12 — mouseover / mouseout</h2>
+    <div id="area" class="box">Pasá el mouse…</div>
+    <p id="msg"><small class="muted">Fuera del área</small></p>
+  </div>
+  <script>
+    $(function(){
+      $("#area").on("mouseover", function(){ $(this).css("background","#0b3b26"); $("#msg").text("Dentro del área"); });
+      $("#area").on("mouseout", function(){ $(this).css("background","#1f2937"); $("#msg").text("Fuera del área"); });
+    });
+  </script>
+</body>
+</html>

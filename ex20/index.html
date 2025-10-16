@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>20 — show() / hide()</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>20 — show() / hide()</h2>
+    <div id="bloqueTexto" class="box">
+      <h3>Bloque de Texto</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Otra línea de prueba.</p>
+    </div>
+    <p>
+      <button id="ocultar" class="btn">Ocultar (2.5s)</button>
+      <button id="mostrar" class="btn">Mostrar (2.5s)</button>
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("#ocultar").on("click", function(){ $("#bloqueTexto").hide(2500); });
+      $("#mostrar").on("click", function(){ $("#bloqueTexto").show(2500); });
+    });
+  </script>
+</body>
+</html>

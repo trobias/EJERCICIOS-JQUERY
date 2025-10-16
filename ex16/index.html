@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>16 — dblclick</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>#caja{width:800px;height:70px;background:lightgreen}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>16 — dblclick</h2>
+    <div id="caja"></div>
+  </div>
+  <script>
+    $(function(){
+      let expandido=false;
+      $("#caja").on("dblclick", function(){
+        $(this).css(expandido?{width:"800px",height:"70px"}:{width:"250px",height:"250px"});
+        expandido=!expandido;
+      });
+    });
+  </script>
+</body>
+</html>

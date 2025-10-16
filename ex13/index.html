@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>13 — hover()</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>td{padding:10px;border:1px solid #374151}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>13 — hover()</h2>
+    <table class="table">
+      <tr><td>1,1</td><td>1,2</td></tr>
+      <tr><td>2,1</td><td>2,2</td></tr>
+    </table>
+  </div>
+  <script>
+    $(function(){
+      $("td").hover(
+        function(){ $(this).css("background","#ff0"); },
+        function(){ $(this).css("background",""); }
+      );
+    });
+  </script>
+</body>
+</html>

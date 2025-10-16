@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>10 — html()</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>10 — html() / html(valor)</h2>
+    <h3 id="titulo">Hola <span>mundo</span></h3>
+    <p>Ver contenido del <code>&lt;head&gt;</code> y setear contenido en el <code>&lt;body&gt;</code>.</p>
+    <p>
+      <button id="btnHead" class="btn">Mostrar HEAD</button>
+      <button id="btnBody" class="btn">Reemplazar BODY</button>
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("#btnHead").on("click", function(){ alert($("head").html()); });
+      $("#btnBody").on("click", function(){
+        $("body").html('<div class="wrapper"><h2>BODY reemplazado</h2><p>Contenido nuevo con <strong>html(valor)</strong>.</p></div>');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>25 — Ajax: load()</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>25 — load()</h2>
+    <p><button id="cargar" class="btn">Cargar snippet</button></p>
+    <div id="destino" class="box">Aquí se cargará contenido externo.</div>
+    <small class="muted">Necesitás servir con un server local (ej: <code>python -m http.server</code>) por política de CORS del navegador.</small>
+  </div>
+  <script>
+    $(function(){
+      $("#cargar").on("click", function(){
+        $("#destino").load("snippet.html #contenido", function(res, status, xhr){
+          if(status!=="success"){ $("#destino").text("Error al cargar: "+status); }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

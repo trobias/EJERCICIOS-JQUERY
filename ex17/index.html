@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>17 — focus</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>input{padding:8px;border-radius:8px;border:1px solid #334155}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>17 — focus</h2>
+    <input id="nombre" placeholder="Tu nombre">
+    <small id="ayuda" class="muted"></small>
+  </div>
+  <script>
+    $(function(){
+      $("#nombre").on("focus", function(){ $(this).css("outline","2px solid #22d3ee"); $("#ayuda").text("Escribí tu nombre…"); });
+      $("#nombre").on("blur", function(){ $(this).css("outline",""); $("#ayuda").text(""); });
+    });
+  </script>
+</body>
+</html>

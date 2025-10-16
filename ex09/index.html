@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>09 — addClass / removeClass</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .thead-style{background:#b2ebf2;color:#004d40;font-weight:700}
+    .tbody-style{background:#f3e5f5;color:#4a148c}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>09 — addClass() / removeClass()</h2>
+    <table class="table">
+      <thead><tr><th>Nombre</th><th>Apellido</th><th>Edad</th></tr></thead>
+      <tbody>
+        <tr><td>Juan</td><td>Pérez</td><td>28</td></tr>
+        <tr><td>Lucía</td><td>Gómez</td><td>32</td></tr>
+        <tr><td>Carlos</td><td>López</td><td>25</td></tr>
+      </tbody>
+    </table>
+    <p>
+      <button id="agregar" class="btn">Asociar clases</button>
+      <button id="quitar" class="btn">Desasociar clases</button>
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("#agregar").on("click", ()=>{$("thead").addClass("thead-style");$("tbody").addClass("tbody-style");});
+      $("#quitar").on("click", ()=>{$("thead").removeClass("thead-style");$("tbody").removeClass("tbody-style");});
+    });
+  </script>
+</body>
+</html>

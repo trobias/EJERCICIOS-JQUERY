@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>02 — Nueva manera con jQuery</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>02 — Nueva manera de programar con jQuery</h2>
+    <p id="p1" class="box">Primero (clickeame)</p>
+    <p id="p2" class="box">Segundo</p>
+    <small class="muted">Se usa <code>$(fn)</code> y eventos delegados limpios.</small>
+  </div>
+  <script>
+    $(function(){
+      $("#p1").on("click", function(){
+        alert("Se hizo click en el primer párrafo");
+      });
+    });
+  </script>
+</body>
+</html>

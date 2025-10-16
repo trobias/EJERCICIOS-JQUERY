@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>24 — each()</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>24 — each()</h2>
+    <ul id="lista" class="box">
+      <li>Item</li><li>Item</li><li>Item</li><li>Item</li>
+    </ul>
+    <button id="numerar" class="btn">Numerar</button>
+  </div>
+  <script>
+    $(function(){
+      $("#numerar").on("click", function(){
+        $("#lista li").each(function(i){ $(this).text(`Item ${i+1}`); });
+      });
+    });
+  </script>
+</body>
+</html>

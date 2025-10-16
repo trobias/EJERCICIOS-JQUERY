@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>04 — Selección por tipo de elemento</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>04 — Selección por tipo de elemento (li)</h2>
+    <ul class="box">
+      <li>Opción 1</li>
+      <li>Opción 2</li>
+      <li>Opción 3</li>
+      <li>Opción 4</li>
+    </ul>
+    <small class="muted">Clic en cualquier &lt;li&gt; para ocultarlo.</small>
+  </div>
+  <script>
+    $(function(){
+      $("li").on("click", function(){ $(this).hide(); });
+    });
+  </script>
+</body>
+</html>

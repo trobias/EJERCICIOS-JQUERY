@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>11 — Administración de eventos</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>11 — Administración de eventos</h2>
+    <p class="box"><strong>Perro</strong>, <strong>gato</strong>, <strong>loro</strong>. Auto, edificio, avión.</p>
+    <small class="muted">Clic en las palabras en negrita para ocultarlas.</small>
+  </div>
+  <script>
+    $(function(){ $("p").on("click","strong",function(){ $(this).hide(); }); });
+  </script>
+</body>
+</html>

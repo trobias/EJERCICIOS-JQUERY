@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>06 — Selección por clase</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>.resaltable{padding:10px;border:1px dashed #475569;border-radius:8px}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>06 — Selección por clase</h2>
+    <div class="resaltable box">A</div>
+    <div class="resaltable box">B</div>
+    <div class="box">C (no afectado)</div>
+  </div>
+  <script>
+    $(function(){
+      $(".resaltable").hover(
+        function(){ $(this).addClass("ring") },
+        function(){ $(this).removeClass("ring") }
+      );
+    });
+  </script>
+</body>
+</html>

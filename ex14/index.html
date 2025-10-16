@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>14 — mousemove</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>#cuadro{width:200px;height:200px;background:#021d2d;border:2px solid #2c7bb6;display:flex;align-items:center;justify-content:center}</style>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>14 — mousemove</h2>
+    <div id="cuadro"><span>Pasa el mouse aquí</span></div>
+    <p id="mensaje">El mouse está fuera del div.</p>
+  </div>
+  <script>
+    $(function(){
+      let dentro=false;
+      const $cuadro=$("#cuadro"), $msg=$("#mensaje");
+      $cuadro.on("mouseenter", ()=>{ dentro=true; $msg.text("Dentro del div — mueve el mouse."); });
+      $cuadro.on("mousemove", (e)=>{
+        const rect=$cuadro[0].getBoundingClientRect();
+        const x=Math.round(e.clientX-rect.left), y=Math.round(e.clientY-rect.top);
+        $msg.text(`Dentro del div — X: ${x}px, Y: ${y}px`);
+      });
+      $cuadro.on("mouseleave", ()=>{ dentro=false; $msg.text("El mouse está fuera del div."); });
+      $(window).on("mousemove", (e)=>{ if(!dentro){ $msg.text(`Fuera — X: ${Math.round(e.clientX)}px, Y: ${Math.round(e.clientY)}px`);} });
+    });
+  </script>
+</body>
+</html>

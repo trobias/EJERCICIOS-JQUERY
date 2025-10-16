@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>21 — fadeIn / fadeOut</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>21 — fadeIn / fadeOut</h2>
+    <div id="foto" class="box">Foto / caja</div>
+    <p>
+      <button id="fadeOut" class="btn">fadeOut</button>
+      <button id="fadeIn" class="btn">fadeIn</button>
+    </p>
+  </div>
+  <script>
+    $(function(){
+      $("#fadeOut").on("click", ()=>$("#foto").fadeOut(600));
+      $("#fadeIn").on("click", ()=>$("#foto").fadeIn(600));
+    });
+  </script>
+</body>
+</html>

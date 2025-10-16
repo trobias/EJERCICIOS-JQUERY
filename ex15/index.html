@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>15 — mousedown / mouseup</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>15 — mousedown / mouseup</h2>
+    <button id="btn" class="btn">Mantené presionado</button>
+    <p id="log" class="muted"></p>
+  </div>
+  <script>
+    $(function(){
+      $("#btn").on("mousedown", function(){ $(this).text("Presionando…"); $("#log").text("mousedown"); });
+      $("#btn").on("mouseup", function(){ $(this).text("Mantené presionado"); $("#log").text("mouseup"); });
+      $("#btn").on("mouseleave", function(){ $(this).text("Mantené presionado"); });
+    });
+  </script>
+</body>
+</html>

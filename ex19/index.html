@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>19 — slideUp / slideDown</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>19 — slideUp / slideDown</h2>
+    <button id="toggle" class="btn">Alternar panel</button>
+    <div id="panel" class="box" style="margin-top:12px">Contenido deslizable</div>
+  </div>
+  <script>
+    $(function(){
+      let visible=true;
+      $("#toggle").on("click", function(){
+        if(visible) $("#panel").slideUp(400); else $("#panel").slideDown(400);
+        visible=!visible;
+      });
+    });
+  </script>
+</body>
+</html>

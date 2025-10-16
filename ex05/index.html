@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>05 — Selectores CSS</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>td{padding:10px;border:1px solid #374151}</style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h2>05 — Selectores CSS</h2>
+    <table id="tabla1" class="table">
+      <tr><td>Fila 1 - T1</td></tr>
+      <tr><td>Fila 2 - T1</td></tr>
+      <tr><td>Fila 3 - T1</td></tr>
+    </table>
+    <br>
+    <table id="tabla2" class="table">
+      <tr><td>Fila 1 - T2</td></tr>
+      <tr><td>Fila 2 - T2</td></tr>
+      <tr><td>Fila 3 - T2</td></tr>
+    </table>
+  </div>
+  <script>
+    $(function(){
+      $("#tabla1 tr").on("click", function(){
+        $(this).css("background-color","green");
+      });
+    });
+  </script>
+</body>
+</html>
