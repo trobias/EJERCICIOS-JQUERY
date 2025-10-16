@@ -20,15 +20,13 @@ Cada ejercicio fue desarrollado aplicando buenas prácticas de código, estructu
 ## 🗂️ Estructura del proyecto
 
 jquery-guia/
-├── assets/
-│ └── style.css # Estilos compartidos (modo oscuro, diseño limpio)
-├── ex02/ ... ex25/ # Un ejercicio por carpeta (HTML + jQuery)
-├── index.html # Índice para navegar entre los ejercicios
-├── README.md # Este archivo
-└── setup_git.sh # Script para inicializar y subir el repo
+├── assets/           # Estilos compartidos (modo oscuro, diseño limpio)
+│   └── style.css
+├── ex02/ ... ex25/   # Un ejercicio por carpeta (HTML + jQuery)
+├── index.html        # Índice para navegar entre los ejercicios
+├── README.md         # Este archivo
+└── setup_git.sh      # Script para inicializar y subir el repo
 
-markdown
-Copiar código
 
 ---
 
@@ -75,6 +73,20 @@ El ejercicio 25 usa `$.load()`, que requiere servidor local por política CORS:
 cd jquery-guia
 python -m http.server 8000
 # Luego abrí http://localhost:8000 en tu navegador
+
+## ⚙️ Ejecución local
+
+### 1️⃣ Abrir el índice general
+Abrí el archivo `index.html` directamente desde tu navegador  
+(o con **Live Server** en VSCode).
+
+### 2️⃣ Servir con Python (para el Ejercicio 25)
+El ejercicio 25 usa `$.load()`, que requiere servidor local por política CORS:
+
+```bash
+cd jquery-guia
+python -m http.server 8000
+# Luego abrí http://localhost:8000 en tu navegador
 🎨 Diseño y estilo
 Tema oscuro minimalista
 
@@ -83,29 +95,6 @@ Layout centrado con grid y flexbox
 Colores basados en Tailwind (--bg, --panel, --accent)
 
 Responsivo y limpio, ideal para presentación de TP
-
-🚀 Cómo subir a GitHub
-Si no inicializaste el repositorio aún:
-
-bash
-Copiar código
-git init
-git add .
-git commit -m "AA17: Guía jQuery completa (ejercicios 02–25)"
-git branch -M main
-git remote add origin https://github.com/tuusuario/aa17-jquery.git
-git push -u origin main
-O ejecutá directamente el script:
-
-bash
-Copiar código
-bash setup_git.sh "https://github.com/tuusuario/aa17-jquery.git"
-🧠 Autor
-Nombre: (completa con tu nombre y apellido)
-Carrera: Ingeniería en Sistemas de Información
-Institución: UTN — FRSF
-Año: 2025
-Trabajo práctico: AA17 — jQuery
 
 🏁 Licencia
 Este proyecto se publica bajo licencia MIT, con fines educativos y de libre acceso.
